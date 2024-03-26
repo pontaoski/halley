@@ -5,11 +5,13 @@ on:
       - "**.c"
       - "**.cpp"
       - "**.h"
+      - ".github/workflows/test.yml"
   pull_request:
     paths:
       - "**.c"
       - "**.cpp"
       - "**.h"
+      - ".github/workflows/test.yml"
 jobs:
   test:
     strategy:
