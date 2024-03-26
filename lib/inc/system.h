@@ -1,6 +1,8 @@
-// SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
-//
-// SPDX-License-Identifier: MIT
+/*
+    SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
+
+    SPDX-License-Identifier: MIT
+*/
 
 #ifndef HALLEY_CPU_H
 #define HALLEY_CPU_H

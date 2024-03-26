@@ -18,7 +18,7 @@ halley_private_include = include_directories('.')
 if cc.get_id() == 'msvc'
   halley_c_args = ['/std:c11']
 else
-  halley_c_args = ['-std=c99']
+  halley_c_args = ['-std=c89', '-Wdeclaration-after-statement', '-Werror=declaration-after-statement']
 endif
 
 halley = both_libraries(
