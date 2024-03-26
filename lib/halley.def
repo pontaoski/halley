@@ -1,0 +1,22 @@
+LIBRARY	HALLEY
+EXPORTS
+	HLMemoryManagementUnitReadVirtualInstruction @1
+	HLMemoryManagementUnitReadVirtualUInt8 @2
+	HLMemoryManagementUnitReadVirtualUInt16 @3
+	HLMemoryManagementUnitReadVirtualUInt32 @4
+	HLMemoryManagementUnitReadVirtualUInt64 @5
+	HLMemoryManagementUnitWriteVirtualUInt8 @6
+	HLMemoryManagementUnitWriteVirtualUInt16 @7
+	HLMemoryManagementUnitWriteVirtualUInt32 @8
+	HLMemoryManagementUnitWriteVirtualUInt64 @9
+	HLMemoryManagementUnitReadPhysicalUInt8 @10
+	HLMemoryManagementUnitReadPhysicalUInt16 @11
+	HLMemoryManagementUnitReadPhysicalUInt32 @12
+	HLMemoryManagementUnitReadPhysicalUInt64 @13
+	HLMemoryManagementUnitWritePhysicalUInt8 @14
+	HLMemoryManagementUnitWritePhysicalUInt16 @15
+	HLMemoryManagementUnitWritePhysicalUInt32 @16
+	HLMemoryManagementUnitWritePhysicalUInt64 @17
+	HLMemoryManagementUnitTranslateAddress @18
+	HLSystemInit @19
+	HLSystemExec @20
