@@ -5,6 +5,8 @@
 */
 
 #include <assert.h>
+#include <stdio.h>
+#include <inttypes.h>
 #include "system.h"
 #include "memory_allocation.h"
 #include "system_p.h"
@@ -33,7 +35,9 @@ void HLSystemDone(struct HLSystem **system)
     *system = 0;
 }
 
-#define HLSignExtend64By20(value) ((int64_t)((((value) ^ (1UL << (19))) - (1UL << (19)))))
+#define U1 (uint64_t)(1)
+#define U19 (uint64_t)(19)
+#define HLSignExtend64By20(value) ((int64_t)((((value) ^ (U1 << (U19))) - (U1 << (U19)))))
 
 void HLSystemExec(struct HLSystem *system)
 {
