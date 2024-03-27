@@ -33,7 +33,7 @@ void HLSystemDone(struct HLSystem **system)
     *system = 0;
 }
 
-#define HLSignExtend64(value, bits) ((((value) ^ (1UL << (bits-1))) - (1UL << (bits-1))))
+#define HLSignExtend64By20(value) ((int64_t)((((value) ^ (1UL << (19))) - (1UL << (19)))))
 
 void HLSystemExec(struct HLSystem *system)
 {
@@ -85,7 +85,7 @@ void HLSystemExec(struct HLSystem *system)
         case 0xA: /* the branching instructions */
             switch (HLFunc_B(instruction)) {
             case HLFunc_bra:
-                system->cpu.registers[HLRegIP] += 4 * HLSignExtend64(HLImm_B(instruction), 20);
+                system->cpu.registers[HLRegIP] += 4 * HLSignExtend64By20(HLImm_B(instruction));
                 break;
             case HLFunc_beq:
                 assert(0 && "Unimplemented opcode beq");

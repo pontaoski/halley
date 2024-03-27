@@ -5,6 +5,7 @@
 test_sources = [
   'cpu_test.cpp',
   'memory_management_test.cpp',
+  'sign_extension_test.cpp',
 ]
 if cc.get_id() == 'msvc'
   test_cpp_args = ['/std:c++14']
