@@ -163,6 +163,14 @@ HLInstruction HLMemoryManagementUnitReadVirtualInstruction(
     return HLMemoryManagementUnitReadPhysicalUInt32(mmu, address, code);
 }
 
+HLInstruction HLMemoryManagementUnitReadPhysicalInstruction(
+    struct HLMemoryManagementUnit *mmu,
+    uint64_t address,
+    HLMemoryResult *code)
+{
+    return HLMemoryManagementUnitReadPhysicalUInt32(mmu, address, code);
+}
+
 uint8_t HLMemoryManagementUnitReadVirtualUInt8(
     struct HLMemoryManagementUnit *mmu,
     uint64_t address,
@@ -274,7 +282,7 @@ void HLMemoryManagementUnitWriteVirtualUInt64(
 }
 
 #define HLMemoryManagementUnitCheckDetail(mmu, address, size, ret)             \
-    if (address > mmu->memoryLimit) {                                          \
+    if (address >= mmu->memoryLimit) {                                          \
         *code = HLMemoryResultBus;                                             \
         return ret;                                                            \
     } else if (address % sizeof(uint##size##_t) != 0) {                        \

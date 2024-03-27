@@ -46,6 +46,10 @@ HLInstruction HLMemoryManagementUnitReadVirtualInstruction(
     struct HLMemoryManagementUnit *mmu,
     uint64_t address,
     HLMemoryResult *code);
+HLInstruction HLMemoryManagementUnitReadPhysicalInstruction(
+    struct HLMemoryManagementUnit *mmu,
+    uint64_t address,
+    HLMemoryResult *code);
 
 uint8_t HLMemoryManagementUnitReadVirtualUInt8(
     struct HLMemoryManagementUnit *mmu,

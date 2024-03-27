@@ -16,6 +16,8 @@ struct HLMemoryAllocation;
 
 void HLSystemInit(struct HLSystem **system, struct HLMemoryAllocation *alloc);
 void HLSystemExec(struct HLSystem *system);
+void HLSystemDone(struct HLSystem **system);
+int HLSystemTestCode(struct HLSystem *system);
 
 #ifdef __cplusplus
 }

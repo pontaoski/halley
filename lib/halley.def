@@ -20,3 +20,5 @@ EXPORTS
 	HLMemoryManagementUnitTranslateAddress @18
 	HLSystemInit @19
 	HLSystemExec @20
+	HLMemoryManagementUnitReadPhysicalInstruction @21
+	HLSystemDone @22

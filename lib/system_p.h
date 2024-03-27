@@ -164,6 +164,9 @@ struct HLSystem {
     struct HLCPUCore cpu;
     struct HLInterruptController interrupts;
     struct HLMemoryManagementUnit memory;
+
+    /* testing stuff */
+    int testCode;
 };
 
 #endif
