@@ -24,4 +24,6 @@ TEST(SignExtensionTest, SignExtend64By20) {
 
     auto it = HLSignExtend64By20(HLImm_B(instruction));
     static_assert(std::is_same<decltype(it), int64_t>::value, "sign extension returns a int64_t");
+    static_assert(HLSignExtend64By20(HLImm_B((HLInstruction)(ASMOpcode_bra | ASMFunc_bra | ASMImm_B(17)))) == 17, "sign extension should work for 17");
+    static_assert(HLSignExtend64By20(HLImm_B((HLInstruction)(ASMOpcode_bra | ASMFunc_bra | ASMImm_B(17)))) == 17, "sign extension should work for -300");
 }
